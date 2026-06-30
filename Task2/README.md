@@ -1,47 +1,118 @@
-# 🗺️ Smart Route Planner
+Search Algorithm Comparison Using Python
 
-A Python-based route planning system that compares **three search algorithms** — BFS, UCS, and A* — to find optimal paths in weighted graphs. Built during my AI/ML internship at M - Tech to demonstrate practical implementation of fundamental search strategies.
+Overview
 
----
+This project demonstrates the implementation and comparison of three fundamental graph search algorithms in Python:
 
+- Breadth-First Search (BFS)
+- Uniform Cost Search (UCS)
+- A* Search Algorithm
 
-## 🎯 Overview
-
-This project compares **three search algorithms** on a 10-node weighted graph:
-
-| Algorithm | Type | Optimal? | Data Structure |
-|-----------|------|----------|----------------|
-| **BFS** | Uninformed | Yes (unweighted) | Queue |
-| **UCS** | Uninformed | Yes (weighted) | Priority Queue |
-| **A*** | Informed | Yes (admissible heuristic) | Priority Queue |
-
-The program:
-- Accepts user input for start and goal nodes
-- Runs all three algorithms simultaneously
-- Displays a side-by-side comparison table
-- Identifies the best algorithm for shortest path
+The application allows users to enter a start node and a goal node, executes all three algorithms, and compares their performance based on the path found, total path cost, and the number of nodes explored.
 
 ---
 
-## 🔍 Algorithms Explained
+Features
 
-### 1. BFS (Breadth-First Search)
-- Explores level by level (like ripples in water)
-- Guarantees shortest path in **unweighted** graphs
-- Uses a **Queue** (FIFO)
-
-### 2. UCS (Uniform Cost Search)
-- Expands node with lowest cumulative cost
-- Guarantees shortest path in **weighted** graphs
-- Uses a **Priority Queue** (heapq)
-
-### 3. A* (A-Star Search)
-- Combines actual cost (g) + heuristic estimate (h)
-- Most efficient for real-world pathfinding
-- Uses **Priority Queue** with f(n) = g(n) + h(n)
+- Implements three popular search algorithms.
+- Uses a weighted graph represented with Python dictionaries.
+- Accepts user input for the start and goal nodes.
+- Displays:
+  - Path found
+  - Total path cost
+  - Number of nodes explored
+- Identifies the algorithm that produces the shortest path based on total cost.
 
 ---
 
-## 🏗️ Graph Structure
+Technologies Used
 
-The graph represents a city network with **10 nodes (A-J)**:
+- Python 3
+- "collections.deque" (for BFS queue implementation)
+- "heapq" (for priority queue implementation in UCS and A*)
+
+---
+
+Graph Structure
+
+The project uses a predefined weighted graph consisting of nodes A through J. Edge weights represent traversal costs, while heuristic values are used by the A* algorithm to estimate the remaining distance to the goal.
+
+---
+
+Algorithms Implemented
+
+1. Breadth-First Search (BFS)
+
+- Explores nodes level by level.
+- Guarantees the shortest path only in unweighted graphs.
+- Does not consider edge weights.
+
+2. Uniform Cost Search (UCS)
+
+- Expands the node with the lowest cumulative path cost.
+- Guarantees the optimal solution for graphs with non-negative edge weights.
+
+3. A* Search
+
+- Uses both the actual path cost (g) and heuristic estimate (h).
+- Evaluation function: f(n) = g(n) + h(n)
+- Efficiently finds the optimal path when the heuristic is admissible.
+
+---
+
+How to Run
+
+1. Make sure Python 3 is installed.
+2. Save the program as "search_algorithms.py".
+3. Open a terminal or command prompt.
+4. Run:
+
+python search_algorithms.py
+
+5. Enter the start node and goal node when prompted.
+
+Example:
+
+Enter Start Node: A
+Enter Goal Node: J
+
+---
+
+Sample Output
+
+------ Search Algorithm Comparison ------
+Algorithm Path                           Cost      Nodes Explored
+BFS       A -> B -> D -> G -> I -> J     N/A       10
+UCS       A -> B -> E -> G -> I -> J     13        10
+A*        A -> B -> E -> G -> I -> J     13        8
+
+Best Algorithm for Shortest Path: UCS
+
+---
+
+Learning Outcomes
+
+Through this project, the following concepts were explored:
+
+- Graph representation in Python
+- Queue and priority queue data structures
+- Pathfinding algorithms
+- Heuristic search techniques
+- Algorithm performance comparison
+- Time and space efficiency considerations
+
+---
+
+Future Improvements
+
+- Allow users to create custom graphs.
+- Visualize graph traversal using libraries such as NetworkX and Matplotlib.
+- Support larger and more complex graphs.
+- Add Depth-First Search (DFS), Greedy Best-First Search, and Dijkstra's Algorithm for further comparison.
+- Export search results to a file.
+
+---
+
+Author
+
+Developed as part of an internship project at M - Tech to demonstrate the implementation and comparison of classical graph search algorithms using Python.
