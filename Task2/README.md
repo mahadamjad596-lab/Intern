@@ -4,18 +4,6 @@ A Python-based route planning system that compares **three search algorithms** �
 
 ---
 
-## 📋 Table of Contents
-- [Overview](#overview)
-- [Algorithms Implemented](#algorithms-implemented)
-- [Graph Structure](#graph-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Sample Output](#sample-output)
-- [Key Insights](#key-insights)
-- [Technologies Used](#technologies-used)
-- [Author](#author)
-
----
 
 ## 🎯 Overview
 
