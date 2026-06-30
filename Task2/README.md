@@ -1,118 +1,186 @@
-Search Algorithm Comparison Using Python
+🚀 Search Algorithm Comparison Using Python
 
-Overview
-
-This project demonstrates the implementation and comparison of three fundamental graph search algorithms in Python:
-
-- Breadth-First Search (BFS)
-- Uniform Cost Search (UCS)
-- A* Search Algorithm
-
-The application allows users to enter a start node and a goal node, executes all three algorithms, and compares their performance based on the path found, total path cost, and the number of nodes explored.
+«A Python project that implements and compares BFS, Uniform Cost Search (UCS), and A Search on a weighted graph to find the optimal path.*»
 
 ---
 
-Features
+📖 Project Overview
 
-- Implements three popular search algorithms.
-- Uses a weighted graph represented with Python dictionaries.
-- Accepts user input for the start and goal nodes.
-- Displays:
-  - Path found
-  - Total path cost
-  - Number of nodes explored
-- Identifies the algorithm that produces the shortest path based on total cost.
+This project demonstrates three fundamental Artificial Intelligence (AI) search algorithms used for graph traversal and pathfinding.
 
----
+The program allows users to:
 
-Technologies Used
-
-- Python 3
-- "collections.deque" (for BFS queue implementation)
-- "heapq" (for priority queue implementation in UCS and A*)
+- 🎯 Enter a Start Node and Goal Node
+- 🔍 Execute BFS, UCS, and A* algorithms
+- 📊 Compare the algorithms based on:
+  - Path Found
+  - Total Cost
+  - Nodes Explored
+- 🏆 Identify the best algorithm for the shortest path
 
 ---
 
-Graph Structure
+✨ Features
 
-The project uses a predefined weighted graph consisting of nodes A through J. Edge weights represent traversal costs, while heuristic values are used by the A* algorithm to estimate the remaining distance to the goal.
+✅ Interactive user input
+
+✅ Weighted graph representation
+
+✅ Heuristic-based A* implementation
+
+✅ Algorithm performance comparison
+
+✅ Clean tabular output
+
+✅ Beginner-friendly Python code
 
 ---
 
-Algorithms Implemented
+🛠️ Technologies Used
 
-1. Breadth-First Search (BFS)
+- 🐍 Python 3
+- 📚 "collections.deque"
+- ⚡ "heapq"
+- 💻 Command Line Interface (CLI)
+
+---
+
+🧠 Algorithms Implemented
+
+🌐 Breadth-First Search (BFS)
 
 - Explores nodes level by level.
-- Guarantees the shortest path only in unweighted graphs.
+- Best suited for unweighted graphs.
 - Does not consider edge weights.
-
-2. Uniform Cost Search (UCS)
-
-- Expands the node with the lowest cumulative path cost.
-- Guarantees the optimal solution for graphs with non-negative edge weights.
-
-3. A* Search
-
-- Uses both the actual path cost (g) and heuristic estimate (h).
-- Evaluation function: f(n) = g(n) + h(n)
-- Efficiently finds the optimal path when the heuristic is admissible.
 
 ---
 
-How to Run
+💰 Uniform Cost Search (UCS)
 
-1. Make sure Python 3 is installed.
-2. Save the program as "search_algorithms.py".
-3. Open a terminal or command prompt.
-4. Run:
+- Expands the node with the lowest cumulative cost.
+- Guarantees the optimal path for weighted graphs with non-negative costs.
+
+---
+
+⭐ A* Search Algorithm
+
+- Uses both:
+  - g(n) → Actual path cost
+  - h(n) → Heuristic estimate
+- Evaluation Function:
+
+f(n) = g(n) + h(n)
+
+- Efficiently finds the optimal path while reducing unnecessary exploration.
+
+---
+
+📂 Graph Representation
+
+The project uses a predefined weighted graph containing nodes A → J.
+
+Each edge contains:
+
+- 🔹 Destination Node
+- 🔹 Edge Weight (Cost)
+
+The A* algorithm also uses heuristic values for each node.
+
+---
+
+▶️ How to Run
+
+1️⃣ Clone the repository
+
+git clone <repository-link>
+
+2️⃣ Navigate to the project folder
+
+cd Search-Algorithm-Comparison
+
+3️⃣ Run the program
 
 python search_algorithms.py
 
-5. Enter the start node and goal node when prompted.
-
-Example:
+4️⃣ Enter the nodes
 
 Enter Start Node: A
 Enter Goal Node: J
 
 ---
 
-Sample Output
+📊 Sample Output
 
 ------ Search Algorithm Comparison ------
-Algorithm Path                           Cost      Nodes Explored
-BFS       A -> B -> D -> G -> I -> J     N/A       10
-UCS       A -> B -> E -> G -> I -> J     13        10
-A*        A -> B -> E -> G -> I -> J     13        8
+
+Algorithm   Path                          Cost   Nodes Explored
+
+BFS         A -> B -> D -> G -> I -> J    N/A    10
+
+UCS         A -> B -> E -> G -> I -> J    13     10
+
+A*          A -> B -> E -> G -> I -> J    13     8
 
 Best Algorithm for Shortest Path: UCS
 
 ---
 
-Learning Outcomes
+🎯 Learning Outcomes
 
-Through this project, the following concepts were explored:
+This project helped in understanding:
 
-- Graph representation in Python
-- Queue and priority queue data structures
-- Pathfinding algorithms
-- Heuristic search techniques
-- Algorithm performance comparison
-- Time and space efficiency considerations
-
----
-
-Future Improvements
-
-- Allow users to create custom graphs.
-- Visualize graph traversal using libraries such as NetworkX and Matplotlib.
-- Support larger and more complex graphs.
-- Add Depth-First Search (DFS), Greedy Best-First Search, and Dijkstra's Algorithm for further comparison.
-- Export search results to a file.
+- 📌 Graph data structures
+- 📌 Breadth-First Search (BFS)
+- 📌 Uniform Cost Search (UCS)
+- 📌 A* Search Algorithm
+- 📌 Heuristic functions
+- 📌 Priority queues
+- 📌 Pathfinding concepts
+- 📌 Algorithm comparison techniques
 
 ---
 
-Author
+🚀 Future Enhancements
 
-Developed as part of an internship project at M - Tech to demonstrate the implementation and comparison of classical graph search algorithms using Python.
+- 🎨 Graph visualization using NetworkX & Matplotlib
+- 🌍 Custom graph input from users
+- 📁 Read graph data from files
+- 🔍 Add DFS, Dijkstra's, and Greedy Best-First Search
+- 📈 Performance analysis with execution time
+- 💾 Export comparison results
+
+---
+
+📁 Project Structure
+
+📦 Search-Algorithm-Comparison
+│
+├── 📄 search_algorithms.py
+├── 📄 README.md
+└── 📄 requirements.txt (Optional)
+
+---
+
+🤝 Contribution
+
+Contributions, suggestions, and improvements are always welcome!
+
+Feel free to fork this repository and submit a pull request.
+
+---
+
+📜 License
+
+This project is developed for educational and internship learning purposes.
+
+---
+
+👨‍💻 Author
+
+Mahad Amjad
+
+🎓 Internship Project at M - Tech
+
+🐍 Python | Artificial Intelligence | Graph Search Algorithms
+
+⭐ If you found this project useful, don't forget to star the repository!
